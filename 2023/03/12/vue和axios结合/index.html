@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="简介页面异步操作用得比较多的是axios，与vue结合使用需要注意一些小问题。 正文axios一般嵌套在vue的方法里面，但是要在axios里面对vue定义的变量进行操作时，需要对本方法的this进行获取，因为在axios的then里面的this是在then这个作用域里面。 12345678910PLAINTEXT cutWord()&amp;#123;   var self&#x3D;this; &#x2F;&#x2F;self的作">
+  <meta name="description" content="简介页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。 正文axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。 123456789PLAINTEXTcutWord()&amp;#123;	var self">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue和axios结合">
 <meta property="og:url" content="https://keepyang.gitee.io/blog/2023/03/12/vue%E5%92%8Caxios%E7%BB%93%E5%90%88/index.html">
 <meta property="og:site_name" content="长岛冰茶">
-<meta property="og:description" content="简介页面异步操作用得比较多的是axios，与vue结合使用需要注意一些小问题。 正文axios一般嵌套在vue的方法里面，但是要在axios里面对vue定义的变量进行操作时，需要对本方法的this进行获取，因为在axios的then里面的this是在then这个作用域里面。 12345678910PLAINTEXT cutWord()&amp;#123;   var self&#x3D;this; &#x2F;&#x2F;self的作">
+<meta property="og:description" content="简介页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。 正文axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。 123456789PLAINTEXTcutWord()&amp;#123;	var self">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-03-12T05:52:15.000Z">
-<meta property="article:modified_time" content="2023-03-12T10:55:24.352Z">
+<meta property="article:modified_time" content="2023-03-14T13:34:03.051Z">
 <meta property="article:author" content="长岛冰茶">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -79,8 +79,6 @@
 				<li><a href="https://keepyang.gitee.io/blog" target="_blank">主页</a></li>
 			
 				<li><a href="/blog/tags/%E5%89%8D%E7%AB%AF/" target="_blank">前端</a></li>
-			
-				<li><a href="/blog/tags/Linux/" target="_blank">Linux</a></li>
 			
 				<li><a href="/blog/tags/%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/" target="_blank">资源推荐</a></li>
 			
@@ -169,8 +167,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -203,13 +199,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="https://keepyang.gitee.io/blog">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="https://keepyang.gitee.io/blog">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+					<li style="width: 33.333333333333336%"><a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
 		        
-					<li style="width: 25%"><a href="/blog/tags/Linux/">Linux</a></li>
-		        
-					<li style="width: 25%"><a href="/blog/tags/%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/">资源推荐</a></li>
+					<li style="width: 33.333333333333336%"><a href="/blog/tags/%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/">资源推荐</a></li>
 		        
 				</ul>
 			</nav>
@@ -258,7 +252,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">139字</span>
+      <span class="post-count">143字</span>
     </span>
   </span>
 
@@ -278,9 +272,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>页面异步操作用得比较多的是axios，与vue结合使用需要注意一些小问题。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>axios一般嵌套在vue的方法里面，但是要在axios里面对vue定义的变量进行操作时，需要对本方法的this进行获取，因为在axios的then里面的this是在then这个作用域里面。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line"> cutWord()&#123;</span><br><span class="line">   var self=this; //self的作用域能够获取vue变量的值</span><br><span class="line">  var params = new URLSearchParams();</span><br><span class="line">params.append(&quot;name&quot;,&quot;Lee&quot;);</span><br><span class="line"> axios.post(s+&quot;/CutServlet&quot;,params).then(function (response) &#123;</span><br><span class="line">        this.info=response.data;     </span><br><span class="line">      &#125;)</span><br><span class="line">                   </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PLAINTEXT</span></span><br><span class="line"><span class="title function_">cutWord</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> self=<span class="variable language_">this</span>; <span class="comment">//self的作用域能够获取vue变量的值</span></span><br><span class="line">	<span class="keyword">var</span> params = <span class="keyword">new</span> <span class="title class_">URLSearchParams</span>();</span><br><span class="line">	params.<span class="title function_">append</span>(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Lee&quot;</span>);</span><br><span class="line">	axios.<span class="title function_">post</span>(s+<span class="string">&quot;/CutServlet&quot;</span>,params).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">info</span>=response.<span class="property">data</span>;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     
 
     
@@ -406,30 +401,6 @@
 
 
 
-
-
-
-
-  <div id="giteement-ctn"></div>
-  
-    <link rel="stylesheet" href="/blog/lib/default.css">
-    <script src="/blog/lib/giteement.browser.js"></script>
-  
-  <script>
-  <!-- id: "vue和axios结合" -->
-  var giteement = new Giteement({
-    id: '20230312135215',
-    owner: 'keepyang',
-    repo: 'blog',
-    backcall_uri: 'https://keepyang.gitee.io/blog',
-    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    oauth: {
-      client_id: 'ce9e142cdf1962018024b1a69a39e55555affd5aab6856478311fa218321b633',
-      client_secret: 'a156e0e798f29c8b1d6c2115854344993dbee045bf80d1dc11bce60b63373384'
-    },
-  })
-  giteement.render('giteement-ctn')
-  </script>
 
 
 
@@ -565,14 +536,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">日记本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
