@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://keepyang.gitee.io/blog">
-  <title>vue和axios结合 | 长岛冰茶</title>
+  <title>js代码片段 | 长岛冰茶</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="简介页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。 正文axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。 123456789PLAINTEXTcutWord()&amp;#123;	var self">
+  <meta name="description" content="for 循环12345678910111213&#x2F;&#x2F; 1. 把请求拿到的&amp;#x27;res&amp;#x27;对象中的属性 赋值到 &amp;#x27;ruleFrom&amp;#x27;对象中&#x2F;&#x2F; 2. 并且是两个对象的共用属性才进行赋值操作for (const k in this.ruleFrom) k in res &amp;&amp; (this.ruleFrom[k] &#x3D; res[k]);&#x2F;&#x2F; 把&amp;#x27;ob">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue和axios结合">
-<meta property="og:url" content="https://keepyang.gitee.io/blog/2023/03/10/vue%E5%92%8Caxios%E7%BB%93%E5%90%88/index.html">
+<meta property="og:title" content="js代码片段">
+<meta property="og:url" content="https://keepyang.gitee.io/blog/2023/09/10/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/index.html">
 <meta property="og:site_name" content="长岛冰茶">
-<meta property="og:description" content="简介页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。 正文axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。 123456789PLAINTEXTcutWord()&amp;#123;	var self">
+<meta property="og:description" content="for 循环12345678910111213&#x2F;&#x2F; 1. 把请求拿到的&amp;#x27;res&amp;#x27;对象中的属性 赋值到 &amp;#x27;ruleFrom&amp;#x27;对象中&#x2F;&#x2F; 2. 并且是两个对象的共用属性才进行赋值操作for (const k in this.ruleFrom) k in res &amp;&amp; (this.ruleFrom[k] &#x3D; res[k]);&#x2F;&#x2F; 把&amp;#x27;ob">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-03-10T05:52:15.000Z">
-<meta property="article:modified_time" content="2023-03-14T14:33:59.716Z">
+<meta property="article:published_time" content="2023-09-10T05:32:48.000Z">
+<meta property="article:modified_time" content="2023-09-30T06:00:34.201Z">
 <meta property="article:author" content="长岛冰茶">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -219,14 +219,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue和axios结合" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-代码片段" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      vue和axios结合
+      js代码片段
     </h1>
   
 
@@ -238,8 +238,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/blog/2023/03/10/vue%E5%92%8Caxios%E7%BB%93%E5%90%88/" class="archive-article-date">
-        <time datetime="2023-03-10T05:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-10</time>
+<a href="/blog/2023/09/10/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/" class="archive-article-date">
+        <time datetime="2023-09-10T05:32:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-10</time>
 </a>
 
   
@@ -252,7 +252,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">143字</span>
+      <span class="post-count">227字</span>
     </span>
   </span>
 
@@ -272,9 +272,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>页面异步操作用得比较多的是 axios，与 vue 结合使用需要注意一些小问题。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>axios 一般嵌套在 vue 的方法里面，但是要在 axios 里面对 vue 定义的变量进行操作时，需要对本方法的 this 进行获取，因为在 axios 的 then 里面的 this 是在 then 这个作用域里面。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PLAINTEXT</span></span><br><span class="line"><span class="title function_">cutWord</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> self=<span class="variable language_">this</span>; <span class="comment">//self的作用域能够获取vue变量的值</span></span><br><span class="line">	<span class="keyword">var</span> params = <span class="keyword">new</span> <span class="title class_">URLSearchParams</span>();</span><br><span class="line">	params.<span class="title function_">append</span>(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;Lee&quot;</span>);</span><br><span class="line">	axios.<span class="title function_">post</span>(s+<span class="string">&quot;/CutServlet&quot;</span>,params).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">info</span>=response.<span class="property">data</span>;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 把请求拿到的&#x27;res&#x27;对象中的属性 赋值到 &#x27;ruleFrom&#x27;对象中</span></span><br><span class="line"><span class="comment">// 2. 并且是两个对象的共用属性才进行赋值操作</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> k <span class="keyword">in</span> <span class="variable language_">this</span>.<span class="property">ruleFrom</span>) k <span class="keyword">in</span> res &amp;&amp; (<span class="variable language_">this</span>.<span class="property">ruleFrom</span>[k] = res[k]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把&#x27;obj&#x27;对象中的属性 赋值到 &#x27;data&#x27;对象中</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> k <span class="keyword">in</span> <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj)) <span class="variable language_">this</span>[k] = obj[k];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 过滤掉为空的属性</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> k <span class="keyword">in</span> <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj)) &#123;</span><br><span class="line">  <span class="keyword">if</span> (obj[k]) &#123;</span><br><span class="line">    data[k] = obj[k];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h4 id="正则表达式替换"><a href="#正则表达式替换" class="headerlink" title="正则表达式替换"></a>正则表达式替换</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串替换</span></span><br><span class="line">str = str.<span class="title function_">replace</span>(<span class="regexp">/null/g</span>, <span class="string">&quot;空&quot;</span>);</span><br><span class="line">str = str.<span class="title function_">replace</span>(<span class="regexp">/00:00:00/g</span>, <span class="string">&quot;12:00:00&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 快速修改替换对象数组内的对象属性名</span></span><br><span class="line"><span class="keyword">let</span> arrayData = data;</span><br><span class="line">arrayData = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(</span><br><span class="line">  <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(arrayData)</span><br><span class="line">    .<span class="title function_">replace</span>(<span class="regexp">/roleId/g</span>, <span class="string">&quot;id&quot;</span>)</span><br><span class="line">    .<span class="title function_">replace</span>(<span class="regexp">/roleName/g</span>, <span class="string">&quot;name&quot;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="map-对象"><a href="#map-对象" class="headerlink" title="map 对象"></a>map 对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据原有对象的属性,创造一个新的对象</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">salesmanList</span> = salesmanList.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> (&#123;</span><br><span class="line">  <span class="attr">label</span>: item.<span class="property">name</span>,</span><br><span class="line">  <span class="attr">value</span>: item.<span class="property">id</span>,</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
 
     
 
@@ -347,7 +350,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://keepyang.gitee.io/blog/2023/03/10/vue%E5%92%8Caxios%E7%BB%93%E5%90%88/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://keepyang.gitee.io/blog/2023/09/10/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -362,18 +365,18 @@
 
 <nav id="article-nav">
   
-    <a href="/blog/2023/03/12/%E5%BD%B1%E8%A7%86%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2023/09/15/Vue%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          影视网站推荐
+          Vue中的事件修饰符
         
       </div>
     </a>
   
   
-    <a href="/blog/2023/03/02/axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">axios的基本用法</div>
+    <a href="/blog/2023/04/23/Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AF%BC%E8%88%AA%E6%A0%8F%E8%B7%9F%E9%9A%8F%E9%A1%B5%E9%9D%A2%E5%8F%98%E5%8C%96%E9%A2%9C%E8%89%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue项目中导航栏跟随页面变化颜色</div>
       <i class="icon-circle-right"></i>
     </a>
   
